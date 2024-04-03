@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+    <title>Qual a Porcentagem?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 id="ph1">Qual a Porcentagem?</h1>
+    <section id="form">
+        <div class="np">
+            <input type="number" name="np" id="np" autocomplete="cc-number" value="100">
+        </div>
+
+        <p>de</p>
+
+        <div class="nper">
+            <input type="number" name="nper" id="nper" autocomplete="cc-number" value="100">
+        </div>
+
+        <button onclick="cp()" id="cpb">Calcular</button>
+    </section>
+
+    <p id="resultado" name="resultado"></p>
+
+    <script>
+        function cp(){
+            const porcentagem = (np.value / nper.value) * Number(100);
+            resultado.innerText = porcentagem + "%";
+
+            if (resultado.style.display == 'none' ){
+                resultado.style.display = 'block';
+            }else {
+                    resultado.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
