@@ -19,16 +19,16 @@ h1{
 
 #form{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
     max-width: 585px;
     margin: 0 auto;
 }
 
 #form > button{
-    flex-basis: 150px;
+    flex-basis: 200px;
     padding: 5px;
     border: 2px solid black;
     font-size: 1.1em;
@@ -47,4 +47,10 @@ p#resultado{
     font-weight: bold;
     font-size: 3em;
     display: none;
+}
+
+@media (max-width: 405px){
+    #form input{
+        width: 150px;
+    }
 }
