@@ -12,12 +12,27 @@
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
 }
 
-h1{
-    text-align: center;
-    padding: 20px;
+body{
+    padding-bottom: 30px;
 }
 
-#form{
+h1{
+    text-align: center;
+    padding: 50px 15px;
+}
+
+h2{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.3em;
+}
+
+#form + #form{
+    margin-top: 100px;
+}
+
+#form > #flex-form{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,7 +42,7 @@ h1{
     margin: 0 auto;
 }
 
-#form > button{
+#form button{
     flex-basis: 200px;
     padding: 5px;
     border: 2px solid black;
@@ -37,9 +52,10 @@ h1{
     transition-duration: 0.2s;
 }
 
-#form > button:hover{
+#form button:hover{
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.30);
     transform: scale(108%);
+    animation: ease-in-out;
 }
 
 p#resultado{
@@ -47,6 +63,21 @@ p#resultado{
     font-weight: bold;
     font-size: 3em;
     display: none;
+}
+
+div#desconto, div#produto{
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px 15px 0 15px;
+}
+
+
+
+p#vddp, p#vdpad{
+    display: inline-block;
+    text-align: center;
 }
 
 @media (max-width: 405px){

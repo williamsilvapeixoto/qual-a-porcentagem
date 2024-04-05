@@ -10,32 +10,50 @@
 <body>
     <h1 id="ph1">Qual a Porcentagem?</h1>
     <section id="form">
-        <div class="np">
-            <input type="number" name="np" id="np" autocomplete="cc-number" value="100">
-        </div>
+        <section id="flex-form">
+            <h2>Descubra o quanto um número é de outro em porcentagem</h2>
+            <div class="np">
+                <input type="number" name="np" id="np" autocomplete="cc-number" value="100">
+            </div>
+            <p>de</p>
+            <div class="nper">
+                <input type="number" name="nper" id="nper" autocomplete="cc-number" value="100">
+            </div>
+            <button onclick="cp()" id="cpb">Calcular</button>
+        </section>
 
-        <p>de</p>
-
-        <div class="nper">
-            <input type="number" name="nper" id="nper" autocomplete="cc-number" value="100">
-        </div>
-
-        <button onclick="cp()" id="cpb">Calcular</button>
+        
+         <p id="resultado" name="resultado"></p>
     </section>
 
-    <p id="resultado" name="resultado"></p>
+    <section id="form">
+        <section id="flex-form">
+            <h2>Descubra o valor do desconto e preço 
+                do produto após o desconto</h2>
 
-    <script>
-        function cp(){
-            const porcentagem = (np.value / nper.value) * Number(100);
-            resultado.innerText = porcentagem + "%";
+                <div class="cdvdd">
+                    <label for="cd">Desconto(porcentagem): </label>
+                    <input type="number" name="cd" id="cd" value="20">
+                </div>
+                <div class="cdvdp">
+                    <label for="cvp">Valor do produto: </label>
+                    <input type="number" name="cvp" id="cvp" value="1200">
+                </div>
+<br>
+                <button onclick="devp()">Calcular</button>
+        </section>
 
-            if (resultado.style.display == 'none' ){
-                resultado.style.display = 'block';
-            }else {
-                    resultado.style.display = 'block';
-            }
-        }
+        <div id="desconto">
+            <label for="vddp">Valor do desconto: </label>
+            <p name="vddp" id="vddp"></p>
+        </div>
+        <div id="produto">
+            <label for="vdpad">Valor do produto após desconto: </label>
+            <p name="vdpad" id="vdpad"></p>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="scripts/script.js">
     </script>
 </body>
 </html>
